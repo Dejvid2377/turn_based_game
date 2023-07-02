@@ -13,7 +13,10 @@ UnitBase::UnitBase()
            initialValues().getDurability(),
            initialValues().getSpeed()),
   productUnit(initialValues().getProductUnit())
-  {}
+  {
+    this->setID(Unit::getCounter());
+    Unit::increaseCounter();
+  }
 
 UnitBase::UnitBase
     (char v1, UnitType v2, uint v3, uint v4, uint v5, int v6, uint v7, UnitType v8)

@@ -24,8 +24,24 @@ protected:
     void setID(uint val);
     void setXY(uint valX, uint valY);
     void setDurability(int val);
+
+    friend class boost::serialization::access;
+
+    template<class Archive>
+    void serialize(Archive& ar, const unsigned int version) {
+        ar & member;
+        ar & type;
+        ar & ID;
+        ar & x_position;
+        ar & y_position;
+        ar & durability;
+        ar & speed;
+        ar & instanceCounter;
+    }
 public:
     Unit(char, UnitType, uint, uint, uint, int, uint);
+    Unit() = default;
+    virtual ~Unit() {} 
     uint getCounter();
     const char& getMember() const;
     const UnitType& getType() const;

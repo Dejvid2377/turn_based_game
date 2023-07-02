@@ -55,7 +55,7 @@ const UnitModel& UnitModel::initialValues(UnitType type) {
 
 std::ostream& operator<<(std::ostream& os, const UnitModel& UnitModel) {
     os << "Member: " << UnitModel.getMember() << "\n"
-       << "Type: " << UnitModel.getType() << "\n"
+       << "Type: " << static_cast<char>(UnitModel.getType()) << "\n"
        << "ID: " << UnitModel.getID() << "\n"
        << "X: " << UnitModel.getX() << "\n"
        << "Y: " << UnitModel.getY() << "\n"

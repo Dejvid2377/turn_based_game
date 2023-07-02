@@ -17,7 +17,7 @@ YELLOW = \033[1;33m
 NC = \033[1;0m
 ./$(TARGET) : $(OBJECT)
 	@echo "$(RED)Linkowanie...$(NC)"
-	$(CC) -o $@ $^ -lm
+	$(CC) -o $@ $^ -lboost_serialization
 	@echo "$(BLUE)Linkowanie zakonczone sukcesem.$(NC)"
 
 $(OBJ)/%.o : $(SRC)/%.cpp
