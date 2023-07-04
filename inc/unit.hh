@@ -20,10 +20,6 @@ protected:
     int durability;
     uint speed;
     void increaseCounter();
-    void setMember(uint val);
-    void setID(uint val);
-    void setXY(uint valX, uint valY);
-    void setDurability(int val);
 
     friend class boost::serialization::access;
 
@@ -50,6 +46,10 @@ public:
     const uint& getY() const;
     const int& getDurability() const;
     const uint& getSpeed() const;
+    void setMember(char val);
+    void setID(uint val);
+    void setXY(uint valX, uint valY);
+    void setDurability(int val);
 };
 
 #endif

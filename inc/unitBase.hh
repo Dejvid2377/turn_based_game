@@ -26,6 +26,7 @@ class UnitBase : public Unit {
   public:
     static UnitBase* getInstance();
     const UnitType& getProductUnit() const;
+    void setProductUnit(UnitType unit);
 };
 
 #endif

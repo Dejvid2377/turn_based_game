@@ -18,7 +18,7 @@ Unit::Unit(char v1, UnitType v2, uint v3, uint v4, uint v5, int v6, uint v7)
 {
 }
 
-void Unit::setMember(uint val) { member = val; }
+void Unit::setMember(char val) { member = val; }
 const char& Unit::getMember() const { return member; }
 
 void Unit::setID(uint val) { ID = val; }
@@ -37,3 +37,7 @@ const int& Unit::getDurability() const { return durability; }
 const uint& Unit::getSpeed() const { return speed; }
 
 const UnitType& Unit::getType() const { return type; }
+
+
+
+

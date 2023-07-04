@@ -1,0 +1,8 @@
+#include "../inc/unit.hh"
+#include "../inc/unitBase.hh"
+#include "../inc/unitModel.hh"
+#include "../inc/game.hh"
+
+// Export Gase class for serialization
+BOOST_CLASS_EXPORT_GUID(UnitBase, "unitBase")
+BOOST_CLASS_EXPORT_GUID(UnitModel, "unitModel")

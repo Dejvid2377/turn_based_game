@@ -48,3 +48,4 @@ UnitBase* UnitBase::getInstance() {
   }
 
 const UnitType& UnitBase::getProductUnit() const { return productUnit; }
+void UnitBase::setProductUnit(UnitType unit) { productUnit = unit; }
