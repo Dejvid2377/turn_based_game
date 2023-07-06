@@ -4,7 +4,6 @@
 #include "libraries.hh"
 #include "unitBase.hh"
 #include "unitModel.hh"
-#include "serialization.hh"
 
 class Game {
 private:
@@ -12,14 +11,6 @@ private:
   uint baseID;
   unordered_map<int, shared_ptr<Unit>> units;
   vector<vector<list<int>>> mapBattle;
-
-  friend class boost::serialization::access;
-
-  template <class Archive>
-  void serialize(Archive& ar, const unsigned int version) {
-    ar & units;
-    ar & mapBattle;
-  }
 
 public:
   Game(const string& filename, const string& filename2);
@@ -43,5 +34,14 @@ public:
 
 bool deleteElementFromList(list<int>& lst, int value);
 bool addElementToList(list<int>& lst, int value);
+
+  // #include "serialization.hh" 
+  // friend class boost::serialization::access;
+
+  // template <class Archive>
+  // void serialize(Archive& ar, const unsigned int version) {
+  //   ar & units;
+  //   ar & mapBattle;
+  // }
 
 #endif

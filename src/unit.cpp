@@ -5,6 +5,7 @@ uint Unit::instanceCounter = 0;
 void Unit::increaseCounter() {
     instanceCounter++;
 }
+
 uint Unit::getCounter() { return instanceCounter; }
 
 Unit::Unit(char v1, UnitType v2, uint v3, uint v4, uint v5, int v6, uint v7)
@@ -21,7 +22,11 @@ Unit::Unit(char v1, UnitType v2, uint v3, uint v4, uint v5, int v6, uint v7)
 void Unit::setMember(char val) { member = val; }
 const char& Unit::getMember() const { return member; }
 
-void Unit::setID(uint val) { ID = val; }
+void Unit::setID(uint val)
+{   
+    if (instanceCounter)
+     ID = val; 
+}
 const uint& Unit::getID() const { return ID; }
 
 void Unit::setXY(uint valX, uint valY) {

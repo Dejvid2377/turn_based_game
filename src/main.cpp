@@ -2,7 +2,6 @@
 #include "unitBase.hh"
 #include "unitModel.hh"
 #include "game.hh"
-#include "serialization.hh"
 
 void takeSwitch(int val);
 void speedTests();
@@ -43,10 +42,15 @@ void serializationTest() {
 void speedTests() {
     std::chrono::steady_clock::time_point start1, end1, start2, end2, start3, end3;
     Game game(MAP_FILE,STATUS_FILE);
-
-    start1 = std::chrono::steady_clock::now();
-    game.displayAllObjects();
     game.displayMap();
+    start1 = std::chrono::steady_clock::now();
+    while(1) {
+        int x, y, index;
+        cin >> x >> y >> index;
+        game.displayObjectAt(x,y,index);
+    }
+    game.displayAllObjects();
+    
     end1 = std::chrono::steady_clock::now();
 
     

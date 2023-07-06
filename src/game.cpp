@@ -1,7 +1,7 @@
   #include "../inc/game.hh"
 
-  BOOST_CLASS_EXPORT_GUID(UnitBase, "unitBase")
-  BOOST_CLASS_EXPORT_GUID(UnitModel, "unitModel")
+  //BOOST_CLASS_EXPORT_GUID(UnitBase, "unitBase")
+  //BOOST_CLASS_EXPORT_GUID(UnitModel, "unitModel")
 
   Game::Game(const string& filename, const string& filename2)
   {
@@ -32,8 +32,8 @@
       return false;
 
     string line;
-    std::string firstLine;
-    std::string value;
+    string firstLine;
+    string value;
 
     if (getline(file, firstLine))
       gold = std::stoi(firstLine);
@@ -44,7 +44,7 @@
       int tempDur;
       uint tempX, tempY, tempID;
       
-      std::istringstream iss(line);
+      istringstream iss(line);
       iss >> tempMember >> tempType;
       iss >> tempID >> tempX >> tempY >> tempDur;
 
@@ -221,4 +221,3 @@
 
     }
 }
-
