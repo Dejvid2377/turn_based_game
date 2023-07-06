@@ -4,36 +4,36 @@
 #include "libraries.hh"
 #include "unitBase.hh"
 #include "unitModel.hh"
+using Cell = variant<int, shared_ptr<Unit>>;
 
 class Game {
 private:
-  uint gold;
-  uint baseID;
+  int turn_counter;
   unordered_map<int, shared_ptr<Unit>> units;
-  vector<vector<list<int>>> mapBattle;
-
+  unordered_map<int,unordered_map<int,list<Cell>>> mapBattle;
 public:
   Game(const string& filename, const string& filename2);
-  void addUnit(int id, shared_ptr<Unit> unit);
+  ~Game();
+  void addUnit(int id, const shared_ptr<Unit> & unit);
   void removeUnit(int id);
-  bool createMap(const string& filename);
-  bool updateMap(const string& filename);
-  bool createBattField(const std::string& filename);
-  bool updateBattField(const string& filename);
-  void deleteObjectFromList(uint x, uint y, int value); //zmienic nazwy tych funkcji
-  void addObjectToList(uint x, uint y, int value);
-
   shared_ptr<Unit> getUnit(int id);
+
+  bool createObjectList(const string& filename);
+  bool createBattField(const std::string& filename);
+
+  bool updateMap();
+  bool updateBattField();
+
+  void deleteObjectFromMap(uint x, uint y,const shared_ptr<Unit>& value);
+  void addObjectToMap(uint x, uint y, const shared_ptr<Unit>& value);
+
   void displayMap();
-  void fillMap();
   void displayObjectAt(uint x, uint y, uint index);
-  const unordered_map<int, shared_ptr<Unit>>& getUnits();
-  void printAllUnits() const;
   void displayAllObjects();
 };
 
-bool deleteElementFromList(list<int>& lst, int value);
-bool addElementToList(list<int>& lst, int value);
+bool deleteElementFromList(list<Cell>& lst,const shared_ptr<Unit>& value);
+bool addElementToList(list<Cell>& lst, const shared_ptr<Unit>& value);
 
   // #include "serialization.hh" 
   // friend class boost::serialization::access;

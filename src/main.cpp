@@ -44,12 +44,25 @@ void speedTests() {
     Game game(MAP_FILE,STATUS_FILE);
     game.displayMap();
     start1 = std::chrono::steady_clock::now();
-    while(1) {
+    //while(1) {
         int x, y, index;
-        cin >> x >> y >> index;
-        game.displayObjectAt(x,y,index);
-    }
-    game.displayAllObjects();
+        //cin >> x >> y;
+        x = 0;
+        y = 0;
+        shared_ptr<UnitModel> unit = make_shared<UnitModel>(UnitType::Knight);
+        game.addObjectToMap(x,y,unit);
+        game.displayMap();
+        cout << endl;
+        game.displayAllObjects();
+        game.deleteObjectFromMap(x,y, unit);
+        game.displayMap();
+        cout << endl;
+        game.displayAllObjects();
+
+        if (unit == nullptr) 
+            cout << "mnull\n";
+    //}
+
     
     end1 = std::chrono::steady_clock::now();
 
