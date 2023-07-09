@@ -202,7 +202,7 @@ bool addElementToList(list<Cell>& lst,const shared_ptr<Unit>& value) {
 
 void Game::createStatus(const string & filename)
 {
-    
+    cout << "tura: " << turn_counter << endl;
     Game::turnPreparation();
 
     ofstream file(filename);
@@ -230,6 +230,10 @@ void Game::createStatus(const string & filename)
             file << endl;
         }
     }
+    else
+        file.close();
+    
+    file.close();
 }
 
 void Game::changeMember()
@@ -418,6 +422,10 @@ bool Game::checkWinCondition()
 
 bool Game::executeOrders(const string & filename)
 {
+    if (checkWinCondition()) {
+            exit(0);
+    }
+    
     ifstream file(filename, ios::in);
     if (!file) 
         return false;
