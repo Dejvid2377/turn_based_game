@@ -3,13 +3,16 @@
 
 #include "libraries.hh"
 
+//enum class type for different units on battleground
 enum class UnitType : char {
   Knight = 'K', Swordsman = 'S', Archer = 'A', Pikeman = 'P',
   Ram = 'R', Catapult = 'C', Worker = 'W', Base = 'B', NoUnit = '0'
 };
 
+//base class for Base model and other units
 class Unit {
 private:
+//static variable to monitor the number of class instances and inheriting classes
     static uint instanceCounter;
 protected:
     char member;

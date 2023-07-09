@@ -1,3 +1,6 @@
+//prototype of a data serialization tool - the project was abandoned
+//unnecessary for program work
+
 // #ifndef INT_SERIALIZATION_HPP
 // #define INT_SERIALIZATION_HPP
 

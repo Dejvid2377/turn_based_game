@@ -8,6 +8,7 @@ void Unit::increaseCounter() {
 
 uint Unit::getCounter() { return instanceCounter; }
 
+//class parametric constructor
 Unit::Unit(char v1, UnitType v2, uint v3, uint v4, uint v5, int v6, uint v7)
     : member(v1),
       type(v2),

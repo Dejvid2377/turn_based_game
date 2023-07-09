@@ -2,6 +2,8 @@
 #define UNITMODEL_HH
 #include "unit.hh"
 
+//class inheriting from the Unit class representing combat units
+//extends the values ​​of the unit class with fields assigned only to a combat unit
 class UnitModel : public Unit {
 private:
     uint cost;
@@ -21,7 +23,7 @@ public:
 
 };
 
-
+//prototype of a data serialization tool - the project was abandoned
     // friend class boost::serialization::access;
 
     // template<class Archive>

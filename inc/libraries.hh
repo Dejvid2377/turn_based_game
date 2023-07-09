@@ -1,6 +1,7 @@
 #ifndef LIBRARY_HH
 #define LIBRARY_HH
 
+//file to store all used libraries, const variables and namespaces
 #define MAP_FILE "mapa.txt"
 #define STATUS_FILE "status.txt"
 
@@ -50,6 +51,7 @@ using std::unordered_map;
 using std::map;
 using std::istringstream;
 
+//prototype of a data serialization tool - the project was abandoned
 // using namespace boost::archive;
 // using namespace boost::serialization;
 // #include <boost/archive/text_oarchive.hpp>

@@ -1,5 +1,6 @@
 #include "../inc/unitModel.hh"
 
+//the only possible constructor that imposes values ​​depending on the entity type
 UnitModel::UnitModel(UnitType type)
     : Unit(initialValues(type).getMember(),
            type,
@@ -16,6 +17,7 @@ UnitModel::UnitModel(UnitType type)
     Unit::increaseCounter();
 }
 
+//parametric constructor to help create the main constructor, not available to the public
 UnitModel::UnitModel
     (char v1, UnitType v2, uint v3, uint v4, uint v5, int v6, uint v7, uint v8, uint v9, uint v10)
     : Unit(v1, v2, v3, v4, v5, v6, v7),
@@ -24,6 +26,8 @@ UnitModel::UnitModel
       buildTime(v10)
 {}
 
+//a function that creates model (exemplary) objects for military units 
+//created instance once, next objects get only variables values
 const UnitModel& UnitModel::initialValues(UnitType type) {
     static const UnitModel knight('0',UnitType::Knight, 0, 0, 0, 70, 5, 400, 1, 5);
     static const UnitModel swordsman('0', UnitType::Swordsman, 0, 0, 0, 60, 2, 250, 1, 3);

@@ -2,6 +2,7 @@
 //BOOST_CLASS_EXPORT_GUID(UnitBase, "unitBase")
 //BOOST_CLASS_EXPORT_GUID(UnitModel, "unitModel")
 
+//class constructor with setting initial game variables values  
 Game::Game(const string& filename, const string& filename2)
 {
     goldTab[0] = 2000;
@@ -13,18 +14,20 @@ Game::Game(const string& filename, const string& filename2)
     initializeTable();
 }
 
+//function adding unit to units list
 void Game::addUnit(int id, const shared_ptr<Unit> & unit)
 {
    units.insert({id,unit}); 
 }
-  
+//function removing unit from units list
 void Game::removeUnit(int id) 
 {   
     units[id].reset();
     units.erase(id); 
 }
 
- shared_ptr<Unit> Game::getUnit(int id)
+//function for getting access to chosen object (access by ID)
+shared_ptr<Unit> Game::getUnit(int id)
 {
   auto it = units.find(id);
     if (it != units.end())
@@ -32,6 +35,7 @@ void Game::removeUnit(int id)
     return nullptr;
 }
 
+//function for game initialization, changing data inside files to data inside game instance
 void Game::gameInitialize(const string& filename, const string& filename2)
 {
     if(!createObjectList(filename2)) {
@@ -52,6 +56,7 @@ void Game::gameInitialize(const string& filename, const string& filename2)
         createBattField(filename);
 }
 
+//function creating units list basing on status.txt file
 bool Game::createObjectList(const string& filename)
 {
     ifstream file(filename, ios::in);
@@ -105,6 +110,7 @@ bool Game::createObjectList(const string& filename)
     return true;
 }
 
+//function creating 3D game map basing on file mapa.txt and units list created by Game::createObjectList
 bool Game::createBattField(const string& filename) {
     ifstream file(filename);
     if (file.is_open()) {
@@ -139,6 +145,7 @@ bool Game::createBattField(const string& filename) {
     return true;
 }
 
+//function for deleting object from 3D map and units list
 bool Game::deleteObjectFromMap(uint x, uint y, const shared_ptr<Unit>& value) {
     if (y >= 0 && y < mapBattle.size()) {
         auto it = mapBattle.find(y);
@@ -154,6 +161,7 @@ bool Game::deleteObjectFromMap(uint x, uint y, const shared_ptr<Unit>& value) {
     return true;
 }
 
+//function for adding unit to chosen map path and to units list
 bool Game::addObjectToMap(uint x, uint y, const shared_ptr<Unit>& value) {
     if (y >= 0 && y < mapBattle.size()) {
         auto it = mapBattle.find(y);
@@ -170,6 +178,7 @@ bool Game::addObjectToMap(uint x, uint y, const shared_ptr<Unit>& value) {
     return true;
 }
 
+//helper function, return information about object presence on chosen list
 bool deleteElementFromList(list<Cell>& lst, const shared_ptr<Unit>& value) {
     auto it = find_if(lst.begin(), lst.end(), [&](const Cell& cell) {
         if (holds_alternative<shared_ptr<Unit>>(cell)) {
@@ -187,6 +196,7 @@ bool deleteElementFromList(list<Cell>& lst, const shared_ptr<Unit>& value) {
     return false;
 }
 
+//helper function, return information about object presence on chosen list
 bool addElementToList(list<Cell>& lst,const shared_ptr<Unit>& value) {
     auto it = find_if(lst.begin(), lst.end(), [&](const Cell& cell) {
         return holds_alternative<shared_ptr<Unit>>(cell) && get<shared_ptr<Unit>>(cell) == value;
@@ -200,6 +210,7 @@ bool addElementToList(list<Cell>& lst,const shared_ptr<Unit>& value) {
     return false;
 }
 
+//function for creating status.txt file basing on current turn and game status
 void Game::createStatus(const string & filename)
 {
     cout << "tura: " << turn_counter << endl;
@@ -236,6 +247,8 @@ void Game::createStatus(const string & filename)
     file.close();
 }
 
+//function for changing members type 
+//giving each player the correct information which units belong to him ('P' member)
 void Game::changeMember()
 {
     for (const auto& unit : units) {
@@ -247,6 +260,7 @@ void Game::changeMember()
     }
 }
 
+//function intializing units strength values
 void Game::initializeTable()
 {
     strengthTable[UnitType::Knight] =
@@ -334,8 +348,10 @@ void Game::initializeTable()
     };
 }
 
+//ensuring that the necessary changes are made before the start of each subsequent turn
 void Game::turnPreparation()
 {
+//this fragment changing game state
     Game::changeMember();
     turn_counter++;
     if (baseLocker[0] != 0)
@@ -343,6 +359,7 @@ void Game::turnPreparation()
     if (baseLocker[1] != 0)
         baseLocker[1] -= 1;
 
+//this fragment creating new units if current base passes cooltime
     for (uint i=0; i<2; ++i) {
         if (baseLocker[i]==0) {
             auto unit = dynamic_pointer_cast<UnitBase>(Game::getUnit(i));
@@ -354,7 +371,7 @@ void Game::turnPreparation()
             }
         }
     }
-
+//function changing gold value basing on workers units in gold mines
     for (const auto& row : mapBattle) {
         for (const auto& col : row.second) {
             const list<Cell>& cellList = col.second;
@@ -377,11 +394,13 @@ void Game::turnPreparation()
 
 }
 
+//function for getting unit power after compared to units
 uint Game::getPower(UnitType u1, UnitType u2)
 {
     return strengthTable[u1][u2];
 }
 
+//function checking if win conditions occurs
 bool Game::checkWinCondition()
 {
     if (getUnit(0)->getDurability() <= 0) {
@@ -420,6 +439,7 @@ bool Game::checkWinCondition()
     return false;
 }
 
+//function to execute orders from rozkazy.txt file
 bool Game::executeOrders(const string & filename)
 {
     if (checkWinCondition()) {
@@ -473,6 +493,11 @@ bool Game::executeOrders(const string & filename)
     return true;
 }
 
+//function checking if move is possible and performs it
+//return true if it is, false if not
+//function uses map with tumple identificator:
+// get<0> informs about attack possibility in actual turn
+// get<1> informs about how much move points unit have in actual turn 
 bool Game::checkMove(uint id, uint x, uint y, map<int,actionTuple> & actionMap)
 {
     auto unit = dynamic_pointer_cast<UnitModel>(Game::getUnit(id));
@@ -520,6 +545,8 @@ bool Game::checkMove(uint id, uint x, uint y, map<int,actionTuple> & actionMap)
     return true;
 }
 
+//function checking if base could accept the order to build unit
+//return true if it is, false if not
 bool Game::checkBuild(uint id, char ch)
 {
     int index = (turn_counter-1)%2;
@@ -546,6 +573,8 @@ bool Game::checkBuild(uint id, char ch)
     return true;
 }
 
+//function checking the possibility of an attack and performs it
+//return true if attack is possible, false if not
 bool Game::checkAttack(uint id, uint id2, map<int,actionTuple> & actionMap)
 {
     auto attacker = dynamic_pointer_cast<UnitModel>(Game::getUnit(id));
@@ -581,6 +610,7 @@ bool Game::checkAttack(uint id, uint id2, map<int,actionTuple> & actionMap)
     return true;
 }
 
+//function returning iterator for searching unit
 list<Cell>::iterator Game::findObjectByAddress
     (list<Cell>& objectList, const shared_ptr<Unit>& searchObject) {
         auto it = find_if(objectList.begin(), objectList.end(), [&](const Cell& cell) {
@@ -594,6 +624,41 @@ list<Cell>::iterator Game::findObjectByAddress
         return it;
 }
 
+//function returning pointer for list object on chosen game path
+list<Cell>* Game::getPath(uint x, uint y) {
+    if (y >= 0 && y < mapBattle.size() && x >= 0 && x < mapBattle[y].size()) {
+        return & mapBattle[y][x];
+    }
+    
+    return nullptr;
+}
+
+//function calculating game distance for move and attack
+uint calculateDistance(uint x1, uint x2, uint y1, uint y2)
+
+{
+    return abs(static_cast<int>(x1-x2))+abs(static_cast<int>(y1-y2));
+}
+
+//fucntion checking correctness of created unitType
+bool checkChar(UnitType type)
+{
+    switch (type) {
+    case UnitType::Knight:
+    case UnitType::Swordsman:
+    case UnitType::Archer:
+    case UnitType::Pikeman:
+    case UnitType::Ram:
+    case UnitType::Catapult:
+    case UnitType::Worker:
+        return true;
+    default:
+        return false;
+    }
+}
+
+//**********************************************************************************
+//helping function section
 //**********************************************************************************
 
 void Game::displayMap() {
@@ -615,13 +680,6 @@ void Game::displayMap() {
     }
 }
 
-list<Cell>* Game::getPath(uint x, uint y) {
-    if (y >= 0 && y < mapBattle.size() && x >= 0 && x < mapBattle[y].size()) {
-        return & mapBattle[y][x];
-    }
-    
-    return nullptr;
-}
 
   void Game::displayAllObjects() {
     for (const auto& pair : units) {
@@ -634,24 +692,3 @@ list<Cell>* Game::getPath(uint x, uint y) {
     }
     }
 
-uint calculateDistance(uint x1, uint x2, uint y1, uint y2)
-
-{
-    return abs(static_cast<int>(x1-x2))+abs(static_cast<int>(y1-y2));
-}
-
-bool checkChar(UnitType type)
-{
-    switch (type) {
-    case UnitType::Knight:
-    case UnitType::Swordsman:
-    case UnitType::Archer:
-    case UnitType::Pikeman:
-    case UnitType::Ram:
-    case UnitType::Catapult:
-    case UnitType::Worker:
-        return true;
-    default:
-        return false;
-    }
-}
