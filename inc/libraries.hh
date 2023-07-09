@@ -11,8 +11,11 @@
 #include <stdexcept>
 #include <chrono>
 #include <unordered_map>
+#include <map>
 #include <vector>
 #include <variant>
+#include <tuple>
+#include <cmath>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -31,12 +34,20 @@ using std::runtime_error;
 using std::list;
 using std::vector;
 using std::variant;
+using std::tuple;
+using std::vector;
+using std::make_tuple;
+using std::holds_alternative;
+using std::abs;
+using std::get;
 using std::ifstream;
+using std::ofstream;
 using std::ios;
 using std::chrono::steady_clock;
 using std::chrono::duration;
 using std::chrono::duration_cast;
 using std::unordered_map;
+using std::map;
 using std::istringstream;
 
 // using namespace boost::archive;

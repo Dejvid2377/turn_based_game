@@ -15,7 +15,10 @@ public:
     const uint& getCost() const; 
     const uint& getAttackRange() const;
     const uint& getBuildTime() const;
-    friend std::ostream& operator<<(std::ostream& os, const UnitModel& unitModel); // Declare the operator as a friend
+    static uint checkCost(UnitType type);
+    static uint checkTime(UnitType type);
+    friend std::ostream& operator<<(std::ostream& os, const UnitModel& unitModel);
+
 };
 
 

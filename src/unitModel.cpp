@@ -70,3 +70,13 @@ std::ostream& operator<<(std::ostream& os, const UnitModel& UnitModel) {
 const uint& UnitModel::getCost() const { return cost; }
 const uint& UnitModel::getAttackRange() const { return attackRange; }
 const uint& UnitModel::getBuildTime() const { return buildTime; }
+
+uint UnitModel::checkCost(UnitType type)
+{
+    return initialValues(type).getCost();
+}
+
+uint UnitModel::checkTime(UnitType type)
+{
+    return initialValues(type).getBuildTime();
+}

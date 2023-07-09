@@ -26,16 +26,16 @@ public:
     virtual ~Unit() {} 
     uint getCounter();
     const char& getMember() const;
+    void setMember(char val);    
     const UnitType& getType() const;
     const uint& getID() const;
+    void setID(uint val);    
     const uint& getX() const;
     const uint& getY() const;
+    void setXY(uint valX, uint valY);    
     const int& getDurability() const;
+    void setDurability(int val);    
     const uint& getSpeed() const;
-    void setMember(char val);
-    void setID(uint val);
-    void setXY(uint valX, uint valY);
-    void setDurability(int val);
 };
 
 // friend class boost::serialization::access;
