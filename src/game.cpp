@@ -413,7 +413,7 @@ bool Game::checkWinCondition()
         return true;
     }
 
-    if (turn_counter >= 2000) {
+    if (turn_counter >= MAX_TURNS) {
         int player1 = 0;
         int player2 = 0;
 

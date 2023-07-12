@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/player1.dir/src/hello.cpp.o  -o player1  libgame_lib.a 

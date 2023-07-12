@@ -4,6 +4,7 @@
 //file to store all used libraries, const variables and namespaces
 #define MAP_FILE "mapa.txt"
 #define STATUS_FILE "status.txt"
+#define MAX_TURNS 10
 
 #include <iostream>
 #include <algorithm>

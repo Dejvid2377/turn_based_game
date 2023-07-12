@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/mediator.dir/src/main.cpp.o  -o mediator  libgame_lib.a 
