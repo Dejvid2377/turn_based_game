@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dawid/Pulpit/tests/turn_based_game
+CMAKE_SOURCE_DIR = /home/dawid/Pulpit/turn_based_game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dawid/Pulpit/tests/turn_based_game/build
+CMAKE_BINARY_DIR = /home/dawid/Pulpit/turn_based_game/build
 
 # Utility rule file for clean_game.
 
@@ -55,8 +55,9 @@ include CMakeFiles/clean_game.dir/progress.make
 
 CMakeFiles/clean_game:
 	/usr/bin/cmake -E cmake_echo_color --yellow Czyszczenie...
-	/usr/bin/cmake -E remove -f /home/dawid/Pulpit/tests/turn_based_game/build/main1
-	/usr/bin/cmake -E remove -f /home/dawid/Pulpit/tests/turn_based_game/build/main2
+	/usr/bin/cmake -E remove -f /home/dawid/Pulpit/turn_based_game/build/mediator
+	/usr/bin/cmake -E remove -f /home/dawid/Pulpit/turn_based_game/build/player1
+	/usr/bin/cmake -E remove -f /home/dawid/Pulpit/turn_based_game/build/player2
 	/usr/bin/cmake -E cmake_echo_color --green Czyszczenie\ zakonczone\ sukcesem.
 
 clean_game: CMakeFiles/clean_game
@@ -74,6 +75,6 @@ CMakeFiles/clean_game.dir/clean:
 .PHONY : CMakeFiles/clean_game.dir/clean
 
 CMakeFiles/clean_game.dir/depend:
-	cd /home/dawid/Pulpit/tests/turn_based_game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dawid/Pulpit/tests/turn_based_game /home/dawid/Pulpit/tests/turn_based_game /home/dawid/Pulpit/tests/turn_based_game/build /home/dawid/Pulpit/tests/turn_based_game/build /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/clean_game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dawid/Pulpit/turn_based_game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dawid/Pulpit/turn_based_game /home/dawid/Pulpit/turn_based_game /home/dawid/Pulpit/turn_based_game/build /home/dawid/Pulpit/turn_based_game/build /home/dawid/Pulpit/turn_based_game/build/CMakeFiles/clean_game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_game.dir/depend
 

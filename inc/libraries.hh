@@ -22,6 +22,11 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <thread>
+#include <atomic>
+
+#include <cstdlib>
+#include <ctime>
 
 using std::cout;
 using std::cin;
@@ -51,6 +56,7 @@ using std::chrono::duration_cast;
 using std::unordered_map;
 using std::map;
 using std::istringstream;
+using std::numeric_limits;
 
 //prototype of a data serialization tool - the project was abandoned
 // using namespace boost::archive;

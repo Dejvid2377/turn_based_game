@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dawid/Pulpit/tests/turn_based_game
+CMAKE_SOURCE_DIR = /home/dawid/Pulpit/turn_based_game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dawid/Pulpit/tests/turn_based_game/build
+CMAKE_BINARY_DIR = /home/dawid/Pulpit/turn_based_game/build
 
 # Utility rule file for run.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/dawid/Pulpit/tests/turn_based_game/build
 include CMakeFiles/run.dir/progress.make
 
 CMakeFiles/run: mediator
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running mediator program"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running mediator program"
 	/usr/bin/cmake -E cmake_echo_color --yellow Linkowanie...
 	/usr/bin/cmake -E cmake_echo_color --green Linkowanie\ zakonczone\ sukcesem.
 	./mediator
@@ -74,6 +74,6 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 CMakeFiles/run.dir/depend:
-	cd /home/dawid/Pulpit/tests/turn_based_game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dawid/Pulpit/tests/turn_based_game /home/dawid/Pulpit/tests/turn_based_game /home/dawid/Pulpit/tests/turn_based_game/build /home/dawid/Pulpit/tests/turn_based_game/build /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dawid/Pulpit/turn_based_game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dawid/Pulpit/turn_based_game /home/dawid/Pulpit/turn_based_game /home/dawid/Pulpit/turn_based_game/build /home/dawid/Pulpit/turn_based_game/build /home/dawid/Pulpit/turn_based_game/build/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run.dir/depend
 

@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dawid/Pulpit/tests/turn_based_game/inc 
+CXX_INCLUDES = -I/home/dawid/Pulpit/turn_based_game/inc 
 

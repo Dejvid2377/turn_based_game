@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/game.hh
+/home/dawid/Pulpit/turn_based_game/inc/game.hh
 libraries.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/libraries.hh
+/home/dawid/Pulpit/turn_based_game/inc/libraries.hh
 unitBase.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitBase.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitBase.hh
 unitModel.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitModel.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitModel.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/libraries.hh
+/home/dawid/Pulpit/turn_based_game/inc/libraries.hh
 iostream
 -
 algorithm
@@ -47,40 +47,48 @@ string
 -
 sstream
 -
+thread
+-
+atomic
+-
+cstdlib
+-
+ctime
+-
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/player.hh
+/home/dawid/Pulpit/turn_based_game/inc/player.hh
 game.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/game.hh
+/home/dawid/Pulpit/turn_based_game/inc/game.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/unit.hh
+/home/dawid/Pulpit/turn_based_game/inc/unit.hh
 libraries.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/libraries.hh
+/home/dawid/Pulpit/turn_based_game/inc/libraries.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitBase.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitBase.hh
 unit.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unit.hh
+/home/dawid/Pulpit/turn_based_game/inc/unit.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitModel.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitModel.hh
 unit.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unit.hh
+/home/dawid/Pulpit/turn_based_game/inc/unit.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/src/game.cpp
+/home/dawid/Pulpit/turn_based_game/src/game.cpp
 ../inc/game.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/game.hh
+/home/dawid/Pulpit/turn_based_game/inc/game.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/src/player.cpp
+/home/dawid/Pulpit/turn_based_game/src/player.cpp
 ../inc/player.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/player.hh
+/home/dawid/Pulpit/turn_based_game/inc/player.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/src/unit.cpp
+/home/dawid/Pulpit/turn_based_game/src/unit.cpp
 ../inc/unit.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unit.hh
+/home/dawid/Pulpit/turn_based_game/inc/unit.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/src/unitBase.cpp
+/home/dawid/Pulpit/turn_based_game/src/unitBase.cpp
 ../inc/unitBase.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitBase.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitBase.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/src/unitModel.cpp
+/home/dawid/Pulpit/turn_based_game/src/unitModel.cpp
 ../inc/unitModel.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitModel.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitModel.hh
 

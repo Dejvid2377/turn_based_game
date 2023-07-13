@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/game.hh
+/home/dawid/Pulpit/turn_based_game/inc/game.hh
 libraries.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/libraries.hh
+/home/dawid/Pulpit/turn_based_game/inc/libraries.hh
 unitBase.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitBase.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitBase.hh
 unitModel.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitModel.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitModel.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/libraries.hh
+/home/dawid/Pulpit/turn_based_game/inc/libraries.hh
 iostream
 -
 algorithm
@@ -47,20 +47,28 @@ string
 -
 sstream
 -
+thread
+-
+atomic
+-
+cstdlib
+-
+ctime
+-
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/unit.hh
+/home/dawid/Pulpit/turn_based_game/inc/unit.hh
 libraries.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/libraries.hh
+/home/dawid/Pulpit/turn_based_game/inc/libraries.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitBase.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitBase.hh
 unit.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unit.hh
+/home/dawid/Pulpit/turn_based_game/inc/unit.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/inc/unitModel.hh
+/home/dawid/Pulpit/turn_based_game/inc/unitModel.hh
 unit.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/unit.hh
+/home/dawid/Pulpit/turn_based_game/inc/unit.hh
 
-/home/dawid/Pulpit/tests/turn_based_game/src/main.cpp
+/home/dawid/Pulpit/turn_based_game/src/main.cpp
 ../inc/game.hh
-/home/dawid/Pulpit/tests/turn_based_game/inc/game.hh
+/home/dawid/Pulpit/turn_based_game/inc/game.hh
 

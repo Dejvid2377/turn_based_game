@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dawid/Pulpit/tests/turn_based_game
+CMAKE_SOURCE_DIR = /home/dawid/Pulpit/turn_based_game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dawid/Pulpit/tests/turn_based_game/build
+CMAKE_BINARY_DIR = /home/dawid/Pulpit/turn_based_game/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles /home/dawid/Pulpit/turn_based_game/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -241,36 +241,6 @@ src/game.cpp.s:
 	$(MAKE) -f CMakeFiles/game_lib.dir/build.make CMakeFiles/game_lib.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
-src/hello.o: src/hello.cpp.o
-
-.PHONY : src/hello.o
-
-# target to build an object file
-src/hello.cpp.o:
-	$(MAKE) -f CMakeFiles/player2.dir/build.make CMakeFiles/player2.dir/src/hello.cpp.o
-	$(MAKE) -f CMakeFiles/player1.dir/build.make CMakeFiles/player1.dir/src/hello.cpp.o
-.PHONY : src/hello.cpp.o
-
-src/hello.i: src/hello.cpp.i
-
-.PHONY : src/hello.i
-
-# target to preprocess a source file
-src/hello.cpp.i:
-	$(MAKE) -f CMakeFiles/player2.dir/build.make CMakeFiles/player2.dir/src/hello.cpp.i
-	$(MAKE) -f CMakeFiles/player1.dir/build.make CMakeFiles/player1.dir/src/hello.cpp.i
-.PHONY : src/hello.cpp.i
-
-src/hello.s: src/hello.cpp.s
-
-.PHONY : src/hello.s
-
-# target to generate assembly for a file
-src/hello.cpp.s:
-	$(MAKE) -f CMakeFiles/player2.dir/build.make CMakeFiles/player2.dir/src/hello.cpp.s
-	$(MAKE) -f CMakeFiles/player1.dir/build.make CMakeFiles/player1.dir/src/hello.cpp.s
-.PHONY : src/hello.cpp.s
-
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -324,6 +294,36 @@ src/player.s: src/player.cpp.s
 src/player.cpp.s:
 	$(MAKE) -f CMakeFiles/game_lib.dir/build.make CMakeFiles/game_lib.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
+
+src/player_program.o: src/player_program.cpp.o
+
+.PHONY : src/player_program.o
+
+# target to build an object file
+src/player_program.cpp.o:
+	$(MAKE) -f CMakeFiles/player2.dir/build.make CMakeFiles/player2.dir/src/player_program.cpp.o
+	$(MAKE) -f CMakeFiles/player1.dir/build.make CMakeFiles/player1.dir/src/player_program.cpp.o
+.PHONY : src/player_program.cpp.o
+
+src/player_program.i: src/player_program.cpp.i
+
+.PHONY : src/player_program.i
+
+# target to preprocess a source file
+src/player_program.cpp.i:
+	$(MAKE) -f CMakeFiles/player2.dir/build.make CMakeFiles/player2.dir/src/player_program.cpp.i
+	$(MAKE) -f CMakeFiles/player1.dir/build.make CMakeFiles/player1.dir/src/player_program.cpp.i
+.PHONY : src/player_program.cpp.i
+
+src/player_program.s: src/player_program.cpp.s
+
+.PHONY : src/player_program.s
+
+# target to generate assembly for a file
+src/player_program.cpp.s:
+	$(MAKE) -f CMakeFiles/player2.dir/build.make CMakeFiles/player2.dir/src/player_program.cpp.s
+	$(MAKE) -f CMakeFiles/player1.dir/build.make CMakeFiles/player1.dir/src/player_program.cpp.s
+.PHONY : src/player_program.cpp.s
 
 src/unit.o: src/unit.cpp.o
 
@@ -425,15 +425,15 @@ help:
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
-	@echo "... src/hello.o"
-	@echo "... src/hello.i"
-	@echo "... src/hello.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"
+	@echo "... src/player_program.o"
+	@echo "... src/player_program.i"
+	@echo "... src/player_program.s"
 	@echo "... src/unit.o"
 	@echo "... src/unit.i"
 	@echo "... src/unit.s"

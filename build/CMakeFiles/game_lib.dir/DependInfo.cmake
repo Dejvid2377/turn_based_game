@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dawid/Pulpit/tests/turn_based_game/src/game.cpp" "/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/game_lib.dir/src/game.cpp.o"
-  "/home/dawid/Pulpit/tests/turn_based_game/src/player.cpp" "/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/game_lib.dir/src/player.cpp.o"
-  "/home/dawid/Pulpit/tests/turn_based_game/src/unit.cpp" "/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/game_lib.dir/src/unit.cpp.o"
-  "/home/dawid/Pulpit/tests/turn_based_game/src/unitBase.cpp" "/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/game_lib.dir/src/unitBase.cpp.o"
-  "/home/dawid/Pulpit/tests/turn_based_game/src/unitModel.cpp" "/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/game_lib.dir/src/unitModel.cpp.o"
+  "/home/dawid/Pulpit/turn_based_game/src/game.cpp" "/home/dawid/Pulpit/turn_based_game/build/CMakeFiles/game_lib.dir/src/game.cpp.o"
+  "/home/dawid/Pulpit/turn_based_game/src/player.cpp" "/home/dawid/Pulpit/turn_based_game/build/CMakeFiles/game_lib.dir/src/player.cpp.o"
+  "/home/dawid/Pulpit/turn_based_game/src/unit.cpp" "/home/dawid/Pulpit/turn_based_game/build/CMakeFiles/game_lib.dir/src/unit.cpp.o"
+  "/home/dawid/Pulpit/turn_based_game/src/unitBase.cpp" "/home/dawid/Pulpit/turn_based_game/build/CMakeFiles/game_lib.dir/src/unitBase.cpp.o"
+  "/home/dawid/Pulpit/turn_based_game/src/unitModel.cpp" "/home/dawid/Pulpit/turn_based_game/build/CMakeFiles/game_lib.dir/src/unitModel.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

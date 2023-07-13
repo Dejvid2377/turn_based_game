@@ -6,6 +6,9 @@ set(CMAKE_CXX_STANDARD 17)
 # Add the include directory
 include_directories(inc)
 
+# Find and link against pthread library
+find_package(Threads REQUIRED)
+
 add_library(game_lib STATIC
     src/unit.cpp
     src/unitModel.cpp
@@ -14,17 +17,20 @@ add_library(game_lib STATIC
     src/player.cpp
 )
 
+# Link pthread library with game_lib
+target_link_libraries(game_lib PRIVATE Threads::Threads)
+
 # executable mediator program
 add_executable(mediator src/main.cpp)
-target_link_libraries(mediator PRIVATE game_lib)
+target_link_libraries(mediator PRIVATE game_lib Threads::Threads)
 
 # exacutable player1 program
-add_executable(player1 src/hello.cpp)
-target_link_libraries(player1 PRIVATE game_lib)
+add_executable(player1 src/player_program.cpp)
+target_link_libraries(player1 PRIVATE game_lib Threads::Threads)
 
 # exacutable player2 program (same as player1)
-add_executable(player2 src/hello.cpp)
-target_link_libraries(player2 PRIVATE game_lib)
+add_executable(player2 src/player_program.cpp)
+target_link_libraries(player2 PRIVATE game_lib Threads::Threads)
 
 add_custom_target(run
     COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --yellow "Linkowanie..."
@@ -36,8 +42,9 @@ add_custom_target(run
 
 add_custom_target(clean_game
     COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --yellow "Czyszczenie..."
-    COMMAND ${CMAKE_COMMAND} -E remove -f ${CMAKE_BINARY_DIR}/main1
-    COMMAND ${CMAKE_COMMAND} -E remove -f ${CMAKE_BINARY_DIR}/main2
+    COMMAND ${CMAKE_COMMAND} -E remove -f ${CMAKE_BINARY_DIR}/mediator
+    COMMAND ${CMAKE_COMMAND} -E remove -f ${CMAKE_BINARY_DIR}/player1
+    COMMAND ${CMAKE_COMMAND} -E remove -f ${CMAKE_BINARY_DIR}/player2
     COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "Czyszczenie zakonczone sukcesem."
 )
 

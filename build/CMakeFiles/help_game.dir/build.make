@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dawid/Pulpit/tests/turn_based_game
+CMAKE_SOURCE_DIR = /home/dawid/Pulpit/turn_based_game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dawid/Pulpit/tests/turn_based_game/build
+CMAKE_BINARY_DIR = /home/dawid/Pulpit/turn_based_game/build
 
 # Utility rule file for help_game.
 
@@ -72,6 +72,6 @@ CMakeFiles/help_game.dir/clean:
 .PHONY : CMakeFiles/help_game.dir/clean
 
 CMakeFiles/help_game.dir/depend:
-	cd /home/dawid/Pulpit/tests/turn_based_game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dawid/Pulpit/tests/turn_based_game /home/dawid/Pulpit/tests/turn_based_game /home/dawid/Pulpit/tests/turn_based_game/build /home/dawid/Pulpit/tests/turn_based_game/build /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles/help_game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dawid/Pulpit/turn_based_game/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dawid/Pulpit/turn_based_game /home/dawid/Pulpit/turn_based_game /home/dawid/Pulpit/turn_based_game/build /home/dawid/Pulpit/turn_based_game/build /home/dawid/Pulpit/turn_based_game/build/CMakeFiles/help_game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/help_game.dir/depend
 

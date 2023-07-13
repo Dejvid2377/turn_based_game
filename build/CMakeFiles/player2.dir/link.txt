@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/player2.dir/src/hello.cpp.o  -o player2  libgame_lib.a 
+/usr/bin/c++     CMakeFiles/player2.dir/src/player_program.cpp.o  -o player2  libgame_lib.a -lpthread 

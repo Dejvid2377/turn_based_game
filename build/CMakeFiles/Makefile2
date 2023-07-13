@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dawid/Pulpit/tests/turn_based_game
+CMAKE_SOURCE_DIR = /home/dawid/Pulpit/turn_based_game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dawid/Pulpit/tests/turn_based_game/build
+CMAKE_BINARY_DIR = /home/dawid/Pulpit/turn_based_game/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -84,14 +84,14 @@ clean: CMakeFiles/game_lib.dir/clean
 CMakeFiles/info_game.dir/all:
 	$(MAKE) -f CMakeFiles/info_game.dir/build.make CMakeFiles/info_game.dir/depend
 	$(MAKE) -f CMakeFiles/info_game.dir/build.make CMakeFiles/info_game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num= "Built target info_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num= "Built target info_game"
 .PHONY : CMakeFiles/info_game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/info_game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/info_game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/info_game.dir/rule
 
 # Convenience name for target.
@@ -111,14 +111,14 @@ CMakeFiles/info_game.dir/clean:
 CMakeFiles/clean_game.dir/all:
 	$(MAKE) -f CMakeFiles/clean_game.dir/build.make CMakeFiles/clean_game.dir/depend
 	$(MAKE) -f CMakeFiles/clean_game.dir/build.make CMakeFiles/clean_game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num= "Built target clean_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num= "Built target clean_game"
 .PHONY : CMakeFiles/clean_game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clean_game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/clean_game.dir/rule
 
 # Convenience name for target.
@@ -138,14 +138,14 @@ CMakeFiles/clean_game.dir/clean:
 CMakeFiles/help_game.dir/all:
 	$(MAKE) -f CMakeFiles/help_game.dir/build.make CMakeFiles/help_game.dir/depend
 	$(MAKE) -f CMakeFiles/help_game.dir/build.make CMakeFiles/help_game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num= "Built target help_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num= "Built target help_game"
 .PHONY : CMakeFiles/help_game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/help_game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/help_game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/help_game.dir/rule
 
 # Convenience name for target.
@@ -165,14 +165,14 @@ CMakeFiles/help_game.dir/clean:
 CMakeFiles/run.dir/all: CMakeFiles/mediator.dir/all
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
 	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num=13 "Built target run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num=13 "Built target run"
 .PHONY : CMakeFiles/run.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/run.dir/rule
 
 # Convenience name for target.
@@ -192,14 +192,14 @@ CMakeFiles/run.dir/clean:
 CMakeFiles/player2.dir/all: CMakeFiles/game_lib.dir/all
 	$(MAKE) -f CMakeFiles/player2.dir/build.make CMakeFiles/player2.dir/depend
 	$(MAKE) -f CMakeFiles/player2.dir/build.make CMakeFiles/player2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num=11,12 "Built target player2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num=11,12 "Built target player2"
 .PHONY : CMakeFiles/player2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/player2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/player2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/player2.dir/rule
 
 # Convenience name for target.
@@ -219,14 +219,14 @@ CMakeFiles/player2.dir/clean:
 CMakeFiles/player1.dir/all: CMakeFiles/game_lib.dir/all
 	$(MAKE) -f CMakeFiles/player1.dir/build.make CMakeFiles/player1.dir/depend
 	$(MAKE) -f CMakeFiles/player1.dir/build.make CMakeFiles/player1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num=9,10 "Built target player1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num=9,10 "Built target player1"
 .PHONY : CMakeFiles/player1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/player1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/player1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/player1.dir/rule
 
 # Convenience name for target.
@@ -246,14 +246,14 @@ CMakeFiles/player1.dir/clean:
 CMakeFiles/mediator.dir/all: CMakeFiles/game_lib.dir/all
 	$(MAKE) -f CMakeFiles/mediator.dir/build.make CMakeFiles/mediator.dir/depend
 	$(MAKE) -f CMakeFiles/mediator.dir/build.make CMakeFiles/mediator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num=7,8 "Built target mediator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num=7,8 "Built target mediator"
 .PHONY : CMakeFiles/mediator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mediator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mediator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/mediator.dir/rule
 
 # Convenience name for target.
@@ -273,14 +273,14 @@ CMakeFiles/mediator.dir/clean:
 CMakeFiles/game_lib.dir/all:
 	$(MAKE) -f CMakeFiles/game_lib.dir/build.make CMakeFiles/game_lib.dir/depend
 	$(MAKE) -f CMakeFiles/game_lib.dir/build.make CMakeFiles/game_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target game_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dawid/Pulpit/turn_based_game/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target game_lib"
 .PHONY : CMakeFiles/game_lib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/game_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/game_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/tests/turn_based_game/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dawid/Pulpit/turn_based_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/game_lib.dir/rule
 
 # Convenience name for target.

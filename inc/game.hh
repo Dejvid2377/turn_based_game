@@ -34,6 +34,7 @@ private:
   void changeMember();
 public:
   Game(const string& filename, const string& filename2);
+  Game(const Game& other);
   void addUnit(int id, const shared_ptr<Unit> & unit);
   void removeUnit(int id);
   shared_ptr<Unit> getUnit(int id);

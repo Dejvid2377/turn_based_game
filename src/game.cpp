@@ -14,10 +14,45 @@ Game::Game(const string& filename, const string& filename2)
     initializeTable();
 }
 
+Game::Game(const Game& other) {
+    turn_counter = other.turn_counter;
+    goldTab[0] = other.goldTab[0];
+    goldTab[1] = other.goldTab[1];
+    baseLocker[0] = other.baseLocker[0];
+    baseLocker[1] = other.baseLocker[1];
+
+    // Deep copy the units
+    for (const auto& pair : other.units) {
+        int key = pair.first;
+        const std::shared_ptr<Unit>& originalUnit = pair.second;
+
+        std::shared_ptr<Unit> clonedUnit = std::make_shared<Unit>(*originalUnit);
+        units[key] = clonedUnit;
+    }
+
+    // Deep copy the mapBattle cells
+    for (const auto& outerPair : other.mapBattle) {
+        int outerKey = outerPair.first;
+        const auto& innerMap = outerPair.second;
+
+        for (const auto& innerPair : innerMap) {
+            int innerKey = innerPair.first;
+            const std::list<Cell>& originalList = innerPair.second;
+
+            std::list<Cell> clonedList = originalList;
+            mapBattle[outerKey][innerKey] = clonedList;
+        }
+    }
+
+    // Copy the strengthTable
+    strengthTable = other.strengthTable;
+}
+
 //function adding unit to units list
 void Game::addUnit(int id, const shared_ptr<Unit> & unit)
 {
    units.insert({id,unit}); 
+   cout <<"stworzono obiekt numer: " <<unit->getID() << endl;
 }
 //function removing unit from units list
 void Game::removeUnit(int id) 

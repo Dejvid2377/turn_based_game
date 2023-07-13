@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/player2.dir/src/hello.cpp.o"
+  "CMakeFiles/player2.dir/src/player_program.cpp.o"
   "player2"
   "player2.pdb"
 )
